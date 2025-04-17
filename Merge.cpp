@@ -3,7 +3,28 @@ using namespace std;
 
 int arr[20], B[20];
 int n;
+void input()
+{
+   while (true)
+   {
+    cout << "Masukan Panjang Element Array : ";
+    cin >> n;
+    if (n <=20)
+        break;
+    cout << "\nMaksimal Panjang Array adalah 20" << endl;
+   }
 
+   cout << "\n--------------------------" << endl;
+   cout << "Inputkan Isi Elemen Array" << endl;
+   cout << "--------------------------" << endl;
+   
+   for (int i = 0; i < n; i++)
+   {
+    cout << " Data Index Ke-" << i + 1 << ": ";
+    cin >> arr[i];
+   }
+   
+}
 void mergeSort(int low, int high)
 {
     if (low>=high)
@@ -50,7 +71,11 @@ void mergeSort(int low, int high)
         k++; // step 4f.iii
     }
     
+    // Step 5
+    for (int x = low; x <= high; x++)
+    {
+        arr[x] = B[x];
+    }
     
-
 
 }
