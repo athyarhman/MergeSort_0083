@@ -22,6 +22,17 @@ void mergeSort(int low, int high)
 
     while (i <= mid && j <= high) // step 4d
     {
+       if (arr[i] <= arr[j]) // step 4d.i
+       {
+        B[k] = arr[i]; // step 4d.i.1
+        i++; // step 4d.i.2
+       }
+       else
+       {
+        B[k] = arr[j]; // step 4d.i.3
+        j++; // step 4d.i.4
+       }
+       k++; // step 4d.ii
        
     }
     
